@@ -1,0 +1,12 @@
+_require "basis/main/Word8.smi"
+_require "hello2Impl.smi"
+
+val pthreadCreate =
+    case 'a in ('a -> unit) -> 'a -> int of
+      int => pthreadCreateInt
+    | word => pthreadCreateWord
+    | Word8.word => pthreadCreateWord8
+    | char => pthreadCreateChar
+    | real => pthreadCreateReal
+    (* | Real32.real => pthreadCreateReal32 *)
+    | 'b ptr => pthreadCreatePtr

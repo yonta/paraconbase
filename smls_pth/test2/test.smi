@@ -1,0 +1,5 @@
+_require "basis/main/Int.smi"
+_require "basis/main/String.smi"
+_require "basis/main/General.smi"
+_require "basis/main/TextIO.smi"
+_require "hello2.smi"

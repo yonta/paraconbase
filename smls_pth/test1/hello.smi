@@ -1,0 +1,29 @@
+_require "basis/main/Int.smi"
+_require "basis/main/String.smi"
+_require "basis/main/Word8.smi"
+_require "basis/main/Real32.smi"
+_require "basis/main/TextIO.smi"
+_require "basis/main/General.smi"
+_require "ffi/main/Pointer.smi"
+_require "ptr.smi"
+
+(* val pthreadCreate = *)
+(*     case 'a in ('a -> unit) -> 'a -> int of *)
+(*       int => pthreadCreate *)
+(*     | word => pthreadCreate *)
+(*     | Word8.word => pthreadCreate *)
+(*     | char => pthreadCreate *)
+(*     | real => pthreadCreate *)
+(*     | Real32.real => pthreadCreate *)
+(*     | 'b ptr => pthreadCreate *)
+(*
+val pthreadCreate =
+    case 'a in ('a -> unit) -> 'a -> int of
+      int => pthreadCreateInt
+    | word => pthreadCreateWord
+    | Word8.word => pthreadCreateWord8
+    | char => pthreadCreateChar
+    | real => pthreadCreateReal
+    | Real32.real => pthreadCreateReal32
+    | 'b ptr => pthreadCreatePtr
+*)

@@ -1,0 +1,14 @@
+_require "basis/main/Word8.smi"
+_require "basis/main/Real32.smi"
+_require "ffi/main/Pointer.smi"
+
+type pthread_t = unit ptr
+val new_pthread_t_ref : unit -> pthread_t ref
+
+val pthreadCreateInt : (int -> unit) -> int -> int
+val pthreadCreateWord : (word -> unit) -> word -> int
+val pthreadCreateWord8 : (Word8.word -> unit) -> SMLSharp.Word8.word -> int
+val pthreadCreateChar : (char -> unit) -> char -> int
+val pthreadCreateReal : (real -> unit) -> real -> int
+(* val pthreadCreateReal32 : (Real32.real -> unit) -> SMLSharp.Real32.real -> int *)
+val pthreadCreatePtr : ('b ptr -> unit) -> 'b ptr -> int

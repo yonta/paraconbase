@@ -1,0 +1,19 @@
+_require "basis/main/Word8.smi"
+_require "basis/main/Real32.smi"
+_require "ffi/main/Pointer.smi"
+
+val intPtr : int -> int ptr
+val wordPtr : word -> word ptr
+val word8Ptr : Word8.word -> Word8.word ptr
+val charPtr : char -> char ptr
+val realPtr : real -> real ptr
+val real32Ptr : Real32.real -> Real32.real ptr
+val ptrPtr : 'a ptr -> 'a ptr ptr
+
+val intCast : unit ptr -> int ptr
+val wordCast : unit ptr -> word ptr
+val word8Cast : unit ptr -> Word8.word ptr
+val charCast : unit ptr -> char ptr
+val realCast : unit ptr -> real ptr
+val real32Cast : unit ptr -> Real32.real ptr
+val ptrCast : unit ptr -> 'a ptr ptr

@@ -1,0 +1,23 @@
+_require "basis/main/Word8.smi"
+_require "basis/main/Real32.smi"
+_require "ptrImpl.smi"
+
+val ptr =
+    case 'a in 'a -> 'a ptr of
+      int => intPtr
+    | word => wordPtr
+    | Word8.word => word8Ptr
+    | char => charPtr
+    | real => realPtr
+    | Real32.real => real32Ptr
+    | 'b ptr => ptrPtr
+
+val unitCast =
+    case 'a in unit ptr -> 'a ptr of
+      int => intCast
+    | word => wordCast
+    | Word8.word => word8Cast
+    | char => charCast
+    | real => realCast
+    | Real32.real => real32Cast
+    | 'b ptr => ptrCast
